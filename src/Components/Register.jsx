@@ -31,11 +31,12 @@ export const Register = () => {
   });
   const {
     register,
-    handleSubmit,
+    handleSubmit,reset,
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
   const formFunc = (e) => {
-    console.log("Form Submited");
+    alert("Form Submited");
+    reset();
     console.log(e);
   };
   return (
