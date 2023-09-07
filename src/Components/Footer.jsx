@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { siteName } from "../App";
 export const Footer = () => {
-  const{name,setName}=useContext(siteName);
+  const{site,setSite}=useContext(siteName);
   const[inputName,setInputName]= useState("");
   return (
     <footer className="bg-dark text-white py-5">
@@ -22,8 +22,8 @@ export const Footer = () => {
             <input type="text" onChange={(e)=>{
               return setInputName(e.target.value)
             }}/>
-            <button onClick={()=>{return setName(inputName)}}>Set New Site Name</button>
-            {name}
+            <button onClick={()=>{return setSite(inputName)}}>Set New Site Name</button>
+            {site}
           </div>
         </div>
       </div>
